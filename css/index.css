@@ -519,10 +519,20 @@ footer .cr {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .contact .contact-body {
+    flex-direction: column;
+  }
+}
 .contact .contact-body form {
   width: 50%;
   margin-top: 40px;
   font-size: 14px;
+}
+@media (max-width: 500px) {
+  .contact .contact-body form {
+    width: 100%;
+  }
 }
 .contact .contact-body form textarea,
 .contact .contact-body form select {

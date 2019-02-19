@@ -21,12 +21,17 @@
     .contact-body {
         display: flex;
         justify-content: space-between;
-        
+        @media @mobile {
+            flex-direction: column;
+        }
 
         form {
             width: 50%;
             margin-top: 40px;
             font-size: 14px;
+            @media @mobile {
+                width: 100%;
+            }
             textarea, select {
                 width: 100%;
             }
