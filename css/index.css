@@ -495,6 +495,77 @@ footer .cr {
 .services .tab-item-image {
   padding-right: 84.5px;
 }
+.contact .cta {
+  position: relative;
+}
+.contact .jumbo-text {
+  margin-left: 8%;
+  margin-right: 8%;
+  position: absolute;
+  top: 160px;
+  font-size: 6.4em;
+  font-weight: bold;
+}
+.contact .jumbo-text h1 {
+  color: #fff;
+}
+.contact .contact-us {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.contact .contact-body {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact-body form {
+  width: 50%;
+  margin-top: 40px;
+  font-size: 14px;
+}
+.contact .contact-body form textarea,
+.contact .contact-body form select {
+  width: 100%;
+}
+.contact .contact-body form label {
+  margin-bottom: 2%;
+}
+.contact .contact-body form .share {
+  font-size: 10px;
+  margin-top: 5px;
+  color: lightgray;
+}
+.contact .contact-body form .form-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8%;
+}
+.contact .contact-body form .form-body input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+}
+.contact .contact-body form .form-body select {
+  height: 30px;
+}
+.contact .contact-body form .btn {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px;
+}
+.contact .contact-body fieldset .options {
+  flex-direction: row;
+}
+.contact .work h2 {
+  margin-bottom: 20px;
+}
+.contact .contact-locations div {
+  margin-bottom: 20px;
+}
+.contact .contact-heading {
+  font-weight: bold;
+}
 header {
   width: 100%;
   max-width: 1024px;
