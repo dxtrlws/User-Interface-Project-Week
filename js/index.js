@@ -1,5 +1,6 @@
 // JS goes here
 
+// Toggle for navigation
 const toggle = () => {
   menu.classList.toggle("menu-hidden");
 };
@@ -10,6 +11,7 @@ const menu = document.querySelector(".menu-hidden");
 menuBtn.addEventListener("click", toggle);
 closeBtn.addEventListener("click", toggle);
 
+// Classes for tabs on Services page
 class TabLinks {
   constructor(tabs) {
     this.tabs = tabs;
@@ -52,3 +54,17 @@ class TabContent {
 }
 
 document.querySelectorAll(".tab-link").forEach(tab => new TabLinks(tab));
+
+// Animation for H1 headdings
+
+const heading = Array.from(document.querySelectorAll(".jumbo-text h1"));
+spanWrap(heading);
+
+function spanWrap(wordArray) {
+
+  wordArray.forEach(word => {
+    let letter = word.textContent.split("");
+    word.innerHTML = letter.map(letter => `<span>${letter}</span>`).join("");
+  });
+}
+
