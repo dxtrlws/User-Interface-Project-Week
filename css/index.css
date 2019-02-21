@@ -607,12 +607,13 @@ header nav .navigation .menu {
   align-items: center;
   justify-content: center;
   z-index: 2;
-  width: 100%;
+  width: 0;
   background-color: #9FA9B3;
-  height: 100vh;
-  left: 0;
+  height: 0;
+  right: 0;
   top: 0;
   opacity: 0.98;
+  border-bottom-left-radius: 100%;
 }
 header nav .navigation .menu ul {
   display: flex;

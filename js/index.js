@@ -3,15 +3,33 @@
 // Toggle for navigation
 const toggle = () => {
   menu.classList.toggle("menu-hidden");
-  
-
+  const menuOpen = document.querySelector(".menu");
+  TweenMax.to(menuOpen, 10, { height: "100vh", width: "100%" });
+  console.log(menuOpen);
 };
 const menuBtn = document.querySelector(".menu-open");
 const closeBtn = document.querySelector(".menu-close");
 const menu = document.querySelector(".menu-hidden");
-
-menuBtn.addEventListener("click", toggle);
-closeBtn.addEventListener("click", toggle);
+const menuOpen = document.querySelector(".menu");
+menuBtn.addEventListener("click", () => {
+  menu.classList.remove("menu-hidden");
+  // menuOpen = document.querySelector('.menu');
+  TweenMax.to(menuOpen, 0.2, {
+    height: "100vh",
+    width: "100%",
+    borderBottomLeftRadius: "0"
+  });
+});
+closeBtn.addEventListener("click", () => {
+  TweenMax.to(menuOpen, 0.2, {
+    height: "0",
+    width: "0",
+    borderBottomLeftRadius: "100%"
+  });
+  setTimeout(() => {
+    menu.classList.add("menu-hidden");
+  }, 100);
+});
 
 // Classes for tabs on Services page
 class TabLinks {
@@ -52,13 +70,12 @@ class TabContent {
     items.forEach(item => item.classList.remove("tab-item-selected"));
     // Add the selected class to the correct tab content so it displays
     this.content.classList.add("tab-item-selected");
-    const  tabSelected = document.querySelector('.tab-item-selected');
-    const tabTween2 = document.querySelectorAll('.tab-item');
+    const tabSelected = document.querySelector(".tab-item-selected");
+    const tabTween2 = document.querySelectorAll(".tab-item");
     tabTween2.forEach(tab => {
-      TweenMax.to(tabTween2, 1, {opacity:"0"});
-    })
-    TweenMax.to(tabSelected, 1.5, {opacity:"1"})
-
+      TweenMax.to(tabTween2, 1, { opacity: "0" });
+    });
+    TweenMax.to(tabSelected, 1.5, { opacity: "1" });
   }
 }
 
@@ -70,7 +87,6 @@ const heading = Array.from(document.querySelectorAll(".jumbo-text h1"));
 spanWrap(heading);
 
 function spanWrap(wordArray) {
-
   wordArray.forEach(word => {
     let letter = word.textContent.split("");
     word.innerHTML = letter.map(letter => `<span>${letter}</span>`).join("");
@@ -78,5 +94,5 @@ function spanWrap(wordArray) {
 }
 
 // Shows inital tab selected content on page load
-const initalTabLoad = document.querySelector('.tab-item-selected');
-initalTabLoad.style.opacity = '1';
+const initalTabLoad = document.querySelector(".tab-item-selected");
+initalTabLoad.style.opacity = "1";
