@@ -474,6 +474,7 @@ footer .cr {
 }
 .services .tab-item-selected {
   display: block;
+  opacity: 0;
 }
 .services .tab-item-content {
   display: flex;

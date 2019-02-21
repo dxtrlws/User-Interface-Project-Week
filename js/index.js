@@ -50,6 +50,13 @@ class TabContent {
     items.forEach(item => item.classList.remove("tab-item-selected"));
     // Add the selected class to the correct tab content so it displays
     this.content.classList.add("tab-item-selected");
+    const  tabSelected = document.querySelector('.tab-item-selected');
+    const tabTween2 = document.querySelectorAll('.tab-item');
+    tabTween2.forEach(tab => {
+      TweenMax.to(tabTween2, 1, {opacity:"0"});
+    })
+    TweenMax.to(tabSelected, 1.5, {opacity:"1"})
+
   }
 }
 
@@ -68,3 +75,6 @@ function spanWrap(wordArray) {
   });
 }
 
+// Shows inital tab selected content on page load
+const initalTabLoad = document.querySelector('.tab-item-selected');
+initalTabLoad.style.opacity = '1';
