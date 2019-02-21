@@ -3,7 +3,7 @@
 // Toggle for navigation
 const menuBtn = document.querySelector(".menu-open");
 const closeBtn = document.querySelector(".menu-close");
-
+const menu = document.querySelector(".menu-hidden");
 const menuOpen = document.querySelector(".menu");
 menuBtn.addEventListener("click", () => {
   menu.classList.remove("menu-hidden");
@@ -11,7 +11,7 @@ menuBtn.addEventListener("click", () => {
     height: "100vh",
     width: "100%",
     borderBottomLeftRadius: "0",
-    ease: Linear.easeInOut
+    ease:Linear.easeInOut
   });
 });
 closeBtn.addEventListener("click", () => {
@@ -19,7 +19,7 @@ closeBtn.addEventListener("click", () => {
     height: "0",
     width: "0",
     borderBottomLeftRadius: "100%",
-    ease: Linear.easeInOut
+    ease:Linear.easeInOut
   });
   setTimeout(() => {
     menu.classList.add("menu-hidden");
@@ -76,10 +76,6 @@ class TabContent {
 
 document.querySelectorAll(".tab-link").forEach(tab => new TabLinks(tab));
 
-// Shows inital tab selected content on page load
-const initalTabLoad = document.querySelector(".tab-item-selected");
-initalTabLoad.style.opacity = "1";
-
 // Animation for H1 headdings
 
 const heading = Array.from(document.querySelectorAll(".jumbo-text h1"));
@@ -91,3 +87,7 @@ function spanWrap(wordArray) {
     word.innerHTML = letter.map(letter => `<span>${letter}</span>`).join("");
   });
 }
+
+// Shows inital tab selected content on page load
+const initalTabLoad = document.querySelector(".tab-item-selected");
+initalTabLoad.style.opacity = "1";
