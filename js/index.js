@@ -17,14 +17,16 @@ menuBtn.addEventListener("click", () => {
   TweenMax.to(menuOpen, 0.2, {
     height: "100vh",
     width: "100%",
-    borderBottomLeftRadius: "0"
+    borderBottomLeftRadius: "0",
+    ease:Linear.easeInOut
   });
 });
 closeBtn.addEventListener("click", () => {
   TweenMax.to(menuOpen, 0.2, {
     height: "0",
     width: "0",
-    borderBottomLeftRadius: "100%"
+    borderBottomLeftRadius: "100%",
+    ease:Linear.easeInOut
   });
   setTimeout(() => {
     menu.classList.add("menu-hidden");
