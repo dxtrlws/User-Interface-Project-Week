@@ -3,6 +3,8 @@
 // Toggle for navigation
 const toggle = () => {
   menu.classList.toggle("menu-hidden");
+  
+
 };
 const menuBtn = document.querySelector(".menu-open");
 const closeBtn = document.querySelector(".menu-close");
